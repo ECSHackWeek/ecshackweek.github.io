@@ -52,12 +52,12 @@
 
 				$window.on('resize', function() { $window.trigger('scroll'); });
 
-				$banner.scrollex({
-					bottom:		$header.outerHeight(),
-					terminate:	function() { $header.removeClass('alt'); },
-					enter:		function() { $header.addClass('alt'); },
-					leave:		function() { $header.removeClass('alt'); }
-				});
+				// $banner.scrollex({
+				// 	bottom:		$header.outerHeight(),
+				// 	terminate:	function() { $header.removeClass('alt'); },
+				// 	enter:		function() { $header.addClass('alt'); },
+				// 	leave:		function() { $header.removeClass('alt'); }
+				// });
 
 			}
 
