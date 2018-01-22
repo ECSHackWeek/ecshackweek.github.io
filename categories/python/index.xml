@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Python on ECS Hack Week 2018</title>
-    <link>https://example.org/categories/python/</link>
+    <link>https://ecshackweek.github.io/categories/python/</link>
     <description>Recent content in Python on ECS Hack Week 2018</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Copyright (c) 2018, YourCompany; all rights reserved.</copyright>
     <lastBuildDate>Sat, 20 Jan 2018 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://example.org/categories/python/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://ecshackweek.github.io/categories/python/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Getting started with Jupyter</title>
-      <link>https://example.org/tutorial/getting-started-with-jupyter/</link>
+      <link>https://ecshackweek.github.io/tutorial/getting-started-with-jupyter/</link>
       <pubDate>Sat, 20 Jan 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://example.org/tutorial/getting-started-with-jupyter/</guid>
+      <guid>https://ecshackweek.github.io/tutorial/getting-started-with-jupyter/</guid>
       <description>This page is the first post in a series of introductory python tutorials: 1. Installing Python using Conda
 2. Getting started with Jupyter - this tutorial
 3. [Using Python packages]()
@@ -28,10 +28,10 @@
     
     <item>
       <title>Installing Python using Conda</title>
-      <link>https://example.org/tutorial/installing-python-with-conda/</link>
+      <link>https://ecshackweek.github.io/tutorial/installing-python-with-conda/</link>
       <pubDate>Fri, 19 Jan 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://example.org/tutorial/installing-python-with-conda/</guid>
+      <guid>https://ecshackweek.github.io/tutorial/installing-python-with-conda/</guid>
       <description>This page is the first post in a series of introductory python tutorials: 1. Installing Python using Conda - this tutorial
 2. Getting started with Jupyter
 3. [Using Python packages]()

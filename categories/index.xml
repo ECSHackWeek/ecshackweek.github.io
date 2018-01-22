@@ -2,30 +2,30 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on ECS Hack Week 2018</title>
-    <link>https://example.org/categories/</link>
+    <link>https://ecshackweek.github.io/categories/</link>
     <description>Recent content in Categories on ECS Hack Week 2018</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Copyright (c) 2018, YourCompany; all rights reserved.</copyright>
     
-	<atom:link href="https://example.org/categories/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://ecshackweek.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Jupyter</title>
-      <link>https://example.org/categories/jupyter/</link>
+      <link>https://ecshackweek.github.io/categories/jupyter/</link>
       <pubDate>Sat, 20 Jan 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://example.org/categories/jupyter/</guid>
+      <guid>https://ecshackweek.github.io/categories/jupyter/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Python</title>
-      <link>https://example.org/categories/python/</link>
+      <link>https://ecshackweek.github.io/categories/python/</link>
       <pubDate>Sat, 20 Jan 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://example.org/categories/python/</guid>
+      <guid>https://ecshackweek.github.io/categories/python/</guid>
       <description></description>
     </item>
     
