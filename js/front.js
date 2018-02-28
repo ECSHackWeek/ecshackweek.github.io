@@ -94,10 +94,12 @@ function sliderHomepage () {
 function sliders () {
   if ($('.owl-carousel').length) {
     $('.customers').owlCarousel({
-      items: 6,
-      itemsDesktopSmall: [990, 4],
-      itemsTablet: [768, 2],
-      itemsMobile: [480, 1]
+      items: 3,
+      margin:10,
+      loop:false,
+      rewind:false,
+      autoWidth:true,
+      navigation:false
     })
 
     $('.testimonials').owlCarousel({
