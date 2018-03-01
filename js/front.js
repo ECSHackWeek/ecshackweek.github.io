@@ -102,6 +102,15 @@ function sliders () {
       navigation:false
     })
 
+    $('.recent-posts').owlCarousel({
+      items: 3,
+      margin:10,
+      loop:false,
+      rewind:false,
+      navigation:true,
+      navigationText : ["<i class='fa fa-chevron-left'></i>","<i class='fa fa-chevron-right'></i>"]
+    })
+
     $('.testimonials').owlCarousel({
       items: 4,
       itemsDesktopSmall: [990, 3],

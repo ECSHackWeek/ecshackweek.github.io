@@ -29,6 +29,22 @@
     </item>
     
     <item>
+      <title>Getting started with Jupyter</title>
+      <link>https://ecshackweek.github.io/tutorial/getting-started-with-jupyter/</link>
+      <pubDate>Tue, 30 Jan 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://ecshackweek.github.io/tutorial/getting-started-with-jupyter/</guid>
+      <description>&lt;p&gt;This page is the second post in a series of introductory python tutorials: &lt;br /&gt;
+1. &lt;a href=&#34;https://ecshackweek.github.io/tutorial/installing-python-with-conda/&#34;&gt;Installing Python using Conda&lt;/a&gt;&lt;br /&gt;
+2. Getting started with Jupyter - &lt;em&gt;this tutorial&lt;/em&gt;&lt;br /&gt;
+3. &lt;a href=&#34;https://ecshackweek.github.io/tutorial/using-python-packages/&#34;&gt;Using Python packages&lt;/a&gt;&lt;br /&gt;
+4. &lt;a href=&#34;https://ecshackweek.github.io/tutorial/working-with-data/&#34;&gt;Working with data&lt;/a&gt;&lt;br /&gt;
+5. &lt;a href=&#34;https://ecshackweek.github.io/tutorial/making-figures-with-python/&#34;&gt;Making figures in Python&lt;/a&gt;
+
+&lt;hr&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
       <title>Making figures in Python</title>
       <link>https://ecshackweek.github.io/tutorial/making-figures-with-python/</link>
       <pubDate>Mon, 22 Jan 2018 00:00:00 +0000</pubDate>
@@ -71,22 +87,6 @@
 2. &lt;a href=&#34;https://ecshackweek.github.io/tutorial/getting-started-with-jupyter/&#34;&gt;Getting started with Jupyter&lt;/a&gt;&lt;br /&gt;
 3. &lt;a href=&#34;https://ecshackweek.github.io/tutorial/using-python-packages/&#34;&gt;Using Python packages&lt;/a&gt;&lt;br /&gt;
 4. Working with data - &lt;em&gt;this tutorial&lt;/em&gt;&lt;br /&gt;
-5. &lt;a href=&#34;https://ecshackweek.github.io/tutorial/making-figures-with-python/&#34;&gt;Making figures in Python&lt;/a&gt;
-
-&lt;hr&gt;&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Getting started with Jupyter</title>
-      <link>https://ecshackweek.github.io/tutorial/getting-started-with-jupyter/</link>
-      <pubDate>Sat, 20 Jan 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://ecshackweek.github.io/tutorial/getting-started-with-jupyter/</guid>
-      <description>&lt;p&gt;This page is the second post in a series of introductory python tutorials: &lt;br /&gt;
-1. &lt;a href=&#34;https://ecshackweek.github.io/tutorial/installing-python-with-conda/&#34;&gt;Installing Python using Conda&lt;/a&gt;&lt;br /&gt;
-2. Getting started with Jupyter - &lt;em&gt;this tutorial&lt;/em&gt;&lt;br /&gt;
-3. &lt;a href=&#34;https://ecshackweek.github.io/tutorial/using-python-packages/&#34;&gt;Using Python packages&lt;/a&gt;&lt;br /&gt;
-4. &lt;a href=&#34;https://ecshackweek.github.io/tutorial/working-with-data/&#34;&gt;Working with data&lt;/a&gt;&lt;br /&gt;
 5. &lt;a href=&#34;https://ecshackweek.github.io/tutorial/making-figures-with-python/&#34;&gt;Making figures in Python&lt;/a&gt;
 
 &lt;hr&gt;&lt;/p&gt;</description>
