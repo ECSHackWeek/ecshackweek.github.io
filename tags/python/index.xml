@@ -7,10 +7,58 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Copyright (c) 2018 ECS Hack Week</copyright>
-    <lastBuildDate>Sat, 20 Jan 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 22 Jan 2018 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://ecshackweek.github.io/tags/python/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Making figures in Python</title>
+      <link>https://ecshackweek.github.io/tutorial/making-figures-with-python/</link>
+      <pubDate>Mon, 22 Jan 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://ecshackweek.github.io/tutorial/making-figures-with-python/</guid>
+      <description>&lt;p&gt;This page is the fifth post in a series of introductory python tutorials: &lt;br /&gt;
+1. &lt;a href=&#34;https://ecshackweek.github.io/tutorial/installing-python-with-conda/&#34;&gt;Installing Python using Conda&lt;/a&gt;&lt;br /&gt;
+2. &lt;a href=&#34;https://ecshackweek.github.io/tutorial/getting-started-with-jupyter/&#34;&gt;Getting started with Jupyter&lt;/a&gt;&lt;br /&gt;
+3. &lt;a href=&#34;https://ecshackweek.github.io/tutorial/using-python-packages/&#34;&gt;Using Python packages&lt;/a&gt;&lt;br /&gt;
+4. &lt;a href=&#34;https://ecshackweek.github.io/tutorial/working-with-data/&#34;&gt;Working with data&lt;/a&gt;&lt;br /&gt;
+5. Making figures in Python - &lt;em&gt;this tutorial&lt;/em&gt;
+
+&lt;hr&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Working with Python packages</title>
+      <link>https://ecshackweek.github.io/tutorial/using-python-packages/</link>
+      <pubDate>Mon, 22 Jan 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://ecshackweek.github.io/tutorial/using-python-packages/</guid>
+      <description>&lt;p&gt;This page is the third post in a series of introductory python tutorials: &lt;br /&gt;
+1. &lt;a href=&#34;https://ecshackweek.github.io/tutorial/installing-python-with-conda/&#34;&gt;Installing Python using Conda&lt;/a&gt;&lt;br /&gt;
+2. &lt;a href=&#34;https://ecshackweek.github.io/tutorial/getting-started-with-jupyter/&#34;&gt;Getting started with Jupyter&lt;/a&gt;&lt;br /&gt;
+3. Using Python packages - &lt;em&gt;this tutorial&lt;/em&gt;&lt;br /&gt;
+4. &lt;a href=&#34;https://ecshackweek.github.io/tutorial/working-with-data/&#34;&gt;Working with data&lt;/a&gt;&lt;br /&gt;
+5. &lt;a href=&#34;https://ecshackweek.github.io/tutorial/making-figures-with-python/&#34;&gt;Making figures in Python&lt;/a&gt;
+
+&lt;hr&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Working with data</title>
+      <link>https://ecshackweek.github.io/tutorial/working-with-data/</link>
+      <pubDate>Mon, 22 Jan 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://ecshackweek.github.io/tutorial/working-with-data/</guid>
+      <description>&lt;p&gt;This page is the fourth post in a series of introductory python tutorials: &lt;br /&gt;
+1. &lt;a href=&#34;https://ecshackweek.github.io/tutorial/installing-python-with-conda/&#34;&gt;Installing Python using Conda&lt;/a&gt;&lt;br /&gt;
+2. &lt;a href=&#34;https://ecshackweek.github.io/tutorial/getting-started-with-jupyter/&#34;&gt;Getting started with Jupyter&lt;/a&gt;&lt;br /&gt;
+3. &lt;a href=&#34;https://ecshackweek.github.io/tutorial/using-python-packages/&#34;&gt;Using Python packages&lt;/a&gt;&lt;br /&gt;
+4. Working with data - &lt;em&gt;this tutorial&lt;/em&gt;&lt;br /&gt;
+5. &lt;a href=&#34;https://ecshackweek.github.io/tutorial/making-figures-with-python/&#34;&gt;Making figures in Python&lt;/a&gt;
+
+&lt;hr&gt;&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>Getting started with Jupyter</title>
@@ -18,12 +66,14 @@
       <pubDate>Sat, 20 Jan 2018 00:00:00 +0000</pubDate>
       
       <guid>https://ecshackweek.github.io/tutorial/getting-started-with-jupyter/</guid>
-      <description>This page is the first post in a series of introductory python tutorials: 1. Installing Python using Conda
-2. Getting started with Jupyter - this tutorial
-3. [Using Python packages]()
-4. [Working with data]()
-5. [Making figures in Python]()
- Jupyter is a browser-based application allowing you to run &amp;ldquo;notebooks&amp;rdquo; in your browser.</description>
+      <description>&lt;p&gt;This page is the second post in a series of introductory python tutorials: &lt;br /&gt;
+1. &lt;a href=&#34;https://ecshackweek.github.io/tutorial/installing-python-with-conda/&#34;&gt;Installing Python using Conda&lt;/a&gt;&lt;br /&gt;
+2. Getting started with Jupyter - &lt;em&gt;this tutorial&lt;/em&gt;&lt;br /&gt;
+3. &lt;a href=&#34;https://ecshackweek.github.io/tutorial/using-python-packages/&#34;&gt;Using Python packages&lt;/a&gt;&lt;br /&gt;
+4. &lt;a href=&#34;https://ecshackweek.github.io/tutorial/working-with-data/&#34;&gt;Working with data&lt;/a&gt;&lt;br /&gt;
+5. &lt;a href=&#34;https://ecshackweek.github.io/tutorial/making-figures-with-python/&#34;&gt;Making figures in Python&lt;/a&gt;
+
+&lt;hr&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -32,12 +82,14 @@
       <pubDate>Fri, 19 Jan 2018 00:00:00 +0000</pubDate>
       
       <guid>https://ecshackweek.github.io/tutorial/installing-python-with-conda/</guid>
-      <description>This page is the first post in a series of introductory python tutorials: 1. Installing Python using Conda - this tutorial
-2. Getting started with Jupyter
-3. [Using Python packages]()
-4. [Working with data]()
-5. [Making figures in Python]()
- To begin using Python, we first need to install it. For these tutorials, we will be using Python 3.6, although any Python 3 should work. We use Python 3 as it is the &amp;ldquo;present and future of the language.</description>
+      <description>&lt;p&gt;This page is the first post in a series of introductory python tutorials: &lt;br /&gt;
+1. Installing Python using Conda - &lt;em&gt;this tutorial&lt;/em&gt;&lt;br /&gt;
+2. &lt;a href=&#34;https://ecshackweek.github.io/tutorial/getting-started-with-jupyter/&#34;&gt;Getting started with Jupyter&lt;/a&gt;&lt;br /&gt;
+3. &lt;a href=&#34;https://ecshackweek.github.io/tutorial/using-python-packages/&#34;&gt;Using Python packages&lt;/a&gt;&lt;br /&gt;
+4. &lt;a href=&#34;https://ecshackweek.github.io/tutorial/working-with-data/&#34;&gt;Working with data&lt;/a&gt;&lt;br /&gt;
+5. &lt;a href=&#34;https://ecshackweek.github.io/tutorial/making-figures-with-python/&#34;&gt;Making figures in Python&lt;/a&gt;
+
+&lt;hr&gt;&lt;/p&gt;</description>
     </item>
     
   </channel>

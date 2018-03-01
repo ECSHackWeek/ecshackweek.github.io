@@ -18,12 +18,14 @@
       <pubDate>Sat, 20 Jan 2018 00:00:00 +0000</pubDate>
       
       <guid>https://ecshackweek.github.io/tutorial/getting-started-with-jupyter/</guid>
-      <description>This page is the first post in a series of introductory python tutorials: 1. Installing Python using Conda
-2. Getting started with Jupyter - this tutorial
-3. [Using Python packages]()
-4. [Working with data]()
-5. [Making figures in Python]()
- Jupyter is a browser-based application allowing you to run &amp;ldquo;notebooks&amp;rdquo; in your browser.</description>
+      <description>&lt;p&gt;This page is the second post in a series of introductory python tutorials: &lt;br /&gt;
+1. &lt;a href=&#34;https://ecshackweek.github.io/tutorial/installing-python-with-conda/&#34;&gt;Installing Python using Conda&lt;/a&gt;&lt;br /&gt;
+2. Getting started with Jupyter - &lt;em&gt;this tutorial&lt;/em&gt;&lt;br /&gt;
+3. &lt;a href=&#34;https://ecshackweek.github.io/tutorial/using-python-packages/&#34;&gt;Using Python packages&lt;/a&gt;&lt;br /&gt;
+4. &lt;a href=&#34;https://ecshackweek.github.io/tutorial/working-with-data/&#34;&gt;Working with data&lt;/a&gt;&lt;br /&gt;
+5. &lt;a href=&#34;https://ecshackweek.github.io/tutorial/making-figures-with-python/&#34;&gt;Making figures in Python&lt;/a&gt;
+
+&lt;hr&gt;&lt;/p&gt;</description>
     </item>
     
   </channel>
