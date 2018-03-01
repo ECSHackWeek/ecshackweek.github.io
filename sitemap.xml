@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://ecshackweek.github.io/tutorial/installing-python-with-conda/</loc>
+    <lastmod>2018-01-31T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://ecshackweek.github.io/tutorial/making-figures-with-python/</loc>
     <lastmod>2018-01-22T00:00:00+00:00</lastmod>
   </url>
@@ -23,18 +28,13 @@
   </url>
   
   <url>
-    <loc>https://ecshackweek.github.io/tutorial/installing-python-with-conda/</loc>
-    <lastmod>2018-01-19T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://ecshackweek.github.io/categories/</loc>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://ecshackweek.github.io/</loc>
-    <lastmod>2018-01-22T00:00:00+00:00</lastmod>
+    <lastmod>2018-01-31T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -46,25 +46,25 @@
   
   <url>
     <loc>https://ecshackweek.github.io/tags/python/</loc>
-    <lastmod>2018-01-22T00:00:00+00:00</lastmod>
+    <lastmod>2018-01-31T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://ecshackweek.github.io/categories/python/</loc>
-    <lastmod>2018-01-22T00:00:00+00:00</lastmod>
+    <lastmod>2018-01-31T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://ecshackweek.github.io/tags/</loc>
-    <lastmod>2018-01-22T00:00:00+00:00</lastmod>
+    <lastmod>2018-01-31T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://ecshackweek.github.io/tutorial/</loc>
-    <lastmod>2018-01-22T00:00:00+00:00</lastmod>
+    <lastmod>2018-01-31T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
