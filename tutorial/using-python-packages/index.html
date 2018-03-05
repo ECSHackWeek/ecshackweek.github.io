@@ -163,7 +163,7 @@
 
                     <div class="col-md-9" id="blog-post">
 
-                        <p class="text-muted text-uppercase mb-small text-right">By <a target="_blank" href="">to be written</a> | January 22, 2018</p>
+                        <p class="text-muted text-uppercase mb-small text-right">By <a target="_blank" href="http://mattmurbach.com">Matt Murbach</a> | January 29, 2018</p>
 
                         <div id="post-content">
                           <p>This page is the third post in a series of introductory python tutorials: <br />
@@ -177,7 +177,8 @@
 
 <p>Python is a powerful language, however, the real strength of the Python environment comes from the open-source community that has written 1000s of packages to make certain tasks easier.</p>
 
-<p>Eventually, we will cover how to write your own packages to better organize your own code or share your work, but this tutorial will focus on introducing some of the most widely used packages in scientific research.</p>
+<p>Eventually, we will cover how to write your own packages to better organize your own code or share your work, but this tutorial will focus on introducing some of the most widely used packages in scientific research.
+This is not meant to be a comprehensive review of the Python ecosystem but rather a high-level overview to provide a flavor of different packages.</p>
 
 <h2 id="installing-python-packages">Installing Python Packages</h2>
 
@@ -231,7 +232,7 @@ pip install --upgrade pandas
 
 <h2 id="introduction-to-several-packages-with-short-examples">Introduction to several packages with short examples</h2>
 
-<p><img src="/img/tutorials/scipy.png" width="30%"/></p>
+<p><img src="/img/tutorials/python-packages/scipy.png" width="30%"/></p>
 
 <h4 id="scipy-is-a-collection-of-open-source-python-libraries-for-mathematics-science-and-engineering">SciPy is a collection of open-source Python libraries for mathematics, science, and engineering</h4>
 
@@ -274,7 +275,7 @@ plt.show()
 
 <p><img src="/img/tutorials/python-packages/scipy-output.png" width="50%"/>
 <hr>
-<img src="/img/tutorials/numpy.png" width="40%"/></p>
+<img src="/img/tutorials/python-packages/numpy.png" width="40%"/></p>
 
 <h4 id="numpy-a-very-useful-library-for-scientific-computing-it-adds-support-for-arrays-linear-algebra-tools-and-optimized-integration-with-c-fortran">NumPy a very useful library for scientific computing. It adds support for arrays, linear algebra tools and optimized integration with C/Fortran</h4>
 
@@ -298,6 +299,202 @@ plt.plot(x, y, 'o')
 plt.ylim(0,1)
 plt.show()
 </code></pre>
+
+<p><img src="/img/tutorials/python-packages/numpy-output.png" width="50%"/>
+<hr>
+<img src="/img/tutorials/python-packages/pandas_logo.png"/></p>
+
+<h4 id="python-data-analysis-library-http-pandas-pydata-org">Python Data Analysis Library (<a href="http://pandas.pydata.org/">http://pandas.pydata.org/</a>)</h4>
+
+<ul>
+<li>Amazingly useful library for importing, manipulating, cleaning data from a wide variety of sources</li>
+<li>Examples:</li>
+</ul>
+
+<h5 id="easily-read-in-data-from-csv-excel-json-etc">Easily read in data from csv, excel, json, etc.</h5>
+
+<p>Note: you can download the example file we use <a href="/time-data(833).txt" download/>here</a></p>
+
+<pre><code class="language-python"># import the pandas package
+import pandas as pd
+
+# read in the data from our file
+data = pd.read_csv('./time-data(833).txt')
+
+# assign names to each of the columns for easy reference
+data.columns = ['time(s)', 'current(A)', 'potential(V)', 'frequency(Hz)', 'amplitude(A)']
+
+# print out the first 5 rows of our data
+data.head()
+</code></pre>
+
+<p><img src="/img/tutorials/python-packages/pandas-output-head.png" width="50%"/></p>
+
+<h5 id="manipulate-data-remove-columns-with-nan-calculate-mean-apply-function-to-all-rows">Manipulate data (remove columns with NaN, calculate mean, apply function to all rows)</h5>
+
+<pre><code class="language-python"># drop columns with NaN
+data.dropna(axis=1)
+
+#calculate mean
+data[&quot;current(A)&quot;].mean()
+
+#calculate power directly
+power1 = data[&quot;current(A)&quot;]*data[&quot;potential(V)&quot;]
+
+# or apply lambda function row-by-row
+power2 = data.apply(lambda x: x[&quot;current(A)&quot;]*x[&quot;potential(V)&quot;], axis=1)
+
+# compare the two methods
+(power1 == power2).all()
+</code></pre>
+
+<h5 id="easily-save-data">Easily save data</h5>
+
+<pre><code class="language-python">data[&quot;power(W)&quot;] = power1
+
+data.to_csv(&quot;./add_power.txt&quot;, index=False)
+</code></pre>
+
+<hr>
+
+<p><img src="/img/tutorials/python-packages/matplotlib.png" width="60%"/></p>
+
+<h4 id="matplotlib-is-a-powerful-python-plotting-library-and-forms-the-basis-for-many-other-plotting-libraries">Matplotlib is a powerful Python plotting library and forms the basis for many other plotting libraries</h4>
+
+<ul>
+<li>Simple to use simply, but a LOT of low-level control if you want it&hellip;</li>
+<li>Examples:</li>
+</ul>
+
+<pre><code class="language-python">time = data[&quot;time(s)&quot;]
+voltage = data[&quot;potential(V)&quot;]
+current = data[&quot;current(A)&quot;]
+
+fig = plt.figure(figsize=(6.5,5))
+ax1 = fig.add_subplot(211)
+ax1.plot(time, voltage)
+ax1.set_ylabel(&quot;Voltage (V)&quot;, fontsize=20)
+plt.ylim(-.15,.15)
+
+ax2 = fig.add_subplot(212)
+ax2.plot(time, current)
+ax2.set_ylabel(&quot;Current (A)&quot;, fontsize=20)
+ax2.set_xlabel(&quot;Time (s)&quot;, fontsize=20)
+plt.ylim(-.35,.35)
+
+labels = ['(a)', '(b)']
+for i, ax in enumerate([ax1, ax2]):
+    ax.set_xlim(0,10)
+    ax.text(.055, .85,labels[i], transform=ax.transAxes, fontsize=20, fontweight='bold')
+
+plt.tight_layout()
+plt.show()
+
+fig.savefig('./example_plotting.png', dpi=300, bbox_inches=&quot;tight&quot;)
+</code></pre>
+
+<p><img src="/img/tutorials/python-packages/matplotlib-output.png" width="50%"/>
+<hr>
+<img src="/img/tutorials/python-packages/seaborn.jpg" width="50%" /></p>
+
+<h4 id="seaborn-is-a-high-level-library-for-plotting-many-different-statistical-plots">Seaborn is a high-level library for plotting many different <em>statistical</em> plots</h4>
+
+<p><a href="https://seaborn.pydata.org/examples/index.html">https://seaborn.pydata.org/examples/index.html</a></p>
+
+<pre><code class="language-python">import numpy as np
+from scipy import stats
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+sns.set(color_codes=True)
+
+x = np.random.gamma(6, size=200)
+sns.distplot(x, kde=False, fit=stats.gamma)
+plt.show()
+</code></pre>
+
+<p><img src="/img/tutorials/python-packages/seaborn-output.png" width="50%"/>
+<hr>
+<img src="/img/tutorials/python-packages/sklearn.png" width="30%" /></p>
+
+<h4 id="scikit-learn-is-machine-learning-in-python">scikit-learn is machine learning in Python</h4>
+
+<ul>
+<li>Example:</li>
+</ul>
+
+<pre><code class="language-python"># Code source: Gaël Varoquaux
+# Modified for documentation by Jaques Grobler
+# License: BSD 3 clause
+
+import numpy as np
+import matplotlib.pyplot as plt
+from mpl_toolkits.mplot3d import Axes3D
+
+from sklearn.cluster import KMeans
+from sklearn import datasets
+
+np.random.seed(5)
+
+iris = datasets.load_iris()
+X = iris.data
+y = iris.target
+
+estimators = [('k_means_iris_8', KMeans(n_clusters=8)),
+              ('k_means_iris_3', KMeans(n_clusters=3)),
+              ('k_means_iris_bad_init', KMeans(n_clusters=3, n_init=1,
+                                               init='random'))]
+
+fignum = 1
+titles = ['8 clusters', '3 clusters', '3 clusters, bad initialization']
+for name, est in estimators:
+    fig = plt.figure(fignum, figsize=(4, 3))
+    ax = Axes3D(fig, rect=[0, 0, .95, 1], elev=48, azim=134)
+    est.fit(X)
+    labels = est.labels_
+
+    ax.scatter(X[:, 3], X[:, 0], X[:, 2],
+               c=labels.astype(np.float), edgecolor='k')
+
+    ax.w_xaxis.set_ticklabels([])
+    ax.w_yaxis.set_ticklabels([])
+    ax.w_zaxis.set_ticklabels([])
+    ax.set_xlabel('Petal width')
+    ax.set_ylabel('Sepal length')
+    ax.set_zlabel('Petal length')
+    ax.set_title(titles[fignum - 1])
+    ax.dist = 12
+    fignum = fignum + 1
+
+# Plot the ground truth
+fig = plt.figure(fignum, figsize=(4, 3))
+ax = Axes3D(fig, rect=[0, 0, .95, 1], elev=48, azim=134)
+
+for name, label in [('Setosa', 0),
+                    ('Versicolour', 1),
+                    ('Virginica', 2)]:
+    ax.text3D(X[y == label, 3].mean(),
+              X[y == label, 0].mean(),
+              X[y == label, 2].mean() + 2, name,
+              horizontalalignment='center',
+              bbox=dict(alpha=.2, edgecolor='w', facecolor='w'))
+
+y = np.choose(y, [1, 2, 0]).astype(np.float)
+ax.scatter(X[:, 3], X[:, 0], X[:, 2], c=y, edgecolor='k')
+
+ax.w_xaxis.set_ticklabels([])
+ax.w_yaxis.set_ticklabels([])
+ax.w_zaxis.set_ticklabels([])
+ax.set_xlabel('Petal width')
+ax.set_ylabel('Sepal length')
+ax.set_zlabel('Petal length')
+ax.set_title('Ground Truth')
+ax.dist = 12
+
+fig.show()
+</code></pre>
+
+<p><img src="/img/tutorials/python-packages/sklearn-output.png" width="50%"/></p>
                         </div>
                         
                         
@@ -439,14 +636,14 @@ plt.show()
                 
                 <div class="item same-height-row clearfix">
                     <div class="image same-height-always">
-                        <a href="https://ecshackweek.github.io/tutorial/making-figures-with-python/">
+                        <a href="https://ecshackweek.github.io/tutorial/using-python-packages/">
                           
-                            <img src="https://ecshackweek.github.io/img/tutorials/jupyter.png" class="img-responsive" alt="Making figures in Python">
+                            <img src="https://ecshackweek.github.io/img/tutorials/python-packages/packages.png" class="img-responsive" alt="Working with Python packages">
                           
                         </a>
                     </div>
                     <div class="name same-height-always">
-                        <h5><a href="https://ecshackweek.github.io/tutorial/making-figures-with-python/">Making figures in Python</a></h5>
+                        <h5><a href="https://ecshackweek.github.io/tutorial/using-python-packages/">Working with Python packages</a></h5>
                     </div>
                 </div>
                 
