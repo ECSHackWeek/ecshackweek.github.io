@@ -59,6 +59,10 @@
   <meta property="og:url" content="/tutorial/getting-started-with-jupyter//" />
   <meta property="og:image" content="img/hack-week-logo.png" />
 
+  
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css">
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+
 </head>
 
 
@@ -216,7 +220,7 @@ These notebooks can contain code, equations, and visualizations in one, interact
 
 <p>Let&rsquo;s start by typing some example Python code into the cell:</p>
 
-<pre><code>import datetime
+<pre><code class="language-python">import datetime
 
 hackWeek = datetime.date(2018, 5, 14)
 now = datetime.datetime.now().date()
@@ -238,8 +242,7 @@ print('There are {} days left until the ECS Hack Week. Get stoked!'.format((hack
 
 <p>Type some Markdown:</p>
 
-<pre><code>
-### Lists
+<pre><code class="language-markdown">### Lists
 - a
 - b
 
@@ -380,7 +383,7 @@ You can tell which mode based off of the color of the cell outline (blue = Comma
 
 <h4 id="support-for-lot-s-of-different-languages">Support for lot&rsquo;s of different languages</h4>
 
-<p>While Jupyter grew out of IPython and stands for Ju (Julia) + py (Python) + r &reg;, the Jupyter environment supports kernals for many many (~75) other languages</p>
+<p>While Jupyter grew out of IPython and stands for Ju (Julia) + py (Python) + r ( R ), the Jupyter environment supports kernals for many many (~75) other languages</p>
 
 <p><center><img src="/img/tutorials/jupyter-languages.jpg" width="50%"/></center>
 <p style="text-align:right">Image from Fernando Perez PLOTCON talk</p></p>
@@ -609,6 +612,8 @@ ga('send', 'pageview');
 
 
 <script src="https://ecshackweek.github.io/js/owl.carousel.min.js"></script>
+
+<script>hljs.initHighlightingOnLoad();</script>
 
 
   </body>

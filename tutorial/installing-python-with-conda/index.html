@@ -59,6 +59,10 @@
   <meta property="og:url" content="/tutorial/installing-python-with-conda//" />
   <meta property="og:image" content="img/hack-week-logo.png" />
 
+  
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css">
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+
 </head>
 
 
@@ -196,13 +200,15 @@ Installation instructions for your OS can be found at <a href="https://conda.io/
 
 <p>You can interact with Python at this point, by simply typing <code>python</code>.</p>
 
-<p>Try executing the following statements in this interactive environment:
-&gt;&gt;&gt; &gt;&gt;&gt; a = 5 <br>
-&gt;&gt;&gt; &gt;&gt;&gt; print(a) <br>
-&gt;&gt;&gt; 5 <br>
-&gt;&gt;&gt; &gt;&gt;&gt; myName = &lsquo;Mark&rsquo; <br>
-&gt;&gt;&gt; &gt;&gt;&gt; print(&lsquo;Hi, my name is {}!&rsquo;.format(myName)) <br>
-&gt;&gt;&gt; Hi, my name is Mark!</p>
+<p>Try executing the following statements in this interactive environment:</p>
+
+<pre><code class="language-shell">&gt;&gt;&gt; a = 5
+&gt;&gt;&gt; print(a) &lt;br&gt;
+5
+&gt;&gt;&gt; myName = 'Mark'
+&gt;&gt;&gt; print('Hi, my name is {}!'.format(myName))
+Hi, my name is Mark!
+</code></pre>
 
 <p>To exit out of this interactive Python session, type <code>exit()</code>.</p>
 
@@ -429,6 +435,8 @@ ga('send', 'pageview');
 
 
 <script src="https://ecshackweek.github.io/js/owl.carousel.min.js"></script>
+
+<script>hljs.initHighlightingOnLoad();</script>
 
 
   </body>

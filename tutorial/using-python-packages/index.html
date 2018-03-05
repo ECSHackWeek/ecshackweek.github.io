@@ -59,6 +59,10 @@
   <meta property="og:url" content="/tutorial/using-python-packages//" />
   <meta property="og:image" content="img/hack-week-logo.png" />
 
+  
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css">
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+
 </head>
 
 
@@ -170,6 +174,130 @@
 5. <a href="https://ecshackweek.github.io/tutorial/making-figures-with-python/">Making figures in Python</a>
 
 <hr></p>
+
+<p>Python is a powerful language, however, the real strength of the Python environment comes from the open-source community that has written 1000s of packages to make certain tasks easier.</p>
+
+<p>Eventually, we will cover how to write your own packages to better organize your own code or share your work, but this tutorial will focus on introducing some of the most widely used packages in scientific research.</p>
+
+<h2 id="installing-python-packages">Installing Python Packages</h2>
+
+<p>There are several methods for installing Python packages. In our tutorials, we will use Conda as our default package manager due to it&rsquo;s relative ease of use. For packages that aren&rsquo;t on Conda, we suggest using pip to install from the Python Package Index (PyPI).</p>
+
+<h3 id="conda-is-a-non-python-specific-package-manager">Conda is a non-python specific package manager</h3>
+
+<p>Notes:</p>
+
+<ul>
+<li>Conda installs from <em>binaries</em> and is much better at handling non-Python dependencies than pip</li>
+</ul>
+
+<h3 id="examples">Examples:</h3>
+
+<pre><code class="language-none">conda install scipy
+
+conda list --export &gt; package-list.txt
+</code></pre>
+
+<h3 id="pypi-and-pip">PyPI and pip</h3>
+
+<h4 id="pypi-is-the-python-package-index-https-pypi-python-org-pypi-an-open-repository-that-anyone-can-submit-a-package-to">PyPI is the <a href="https://pypi.python.org/pypi">Python Package Index</a> - an open repository that anyone can submit a package to.</h4>
+
+<p>Notes:</p>
+
+<ul>
+<li>We can use <code>pip</code> to install packages from PyPI and use them in our own code.</li>
+<li>pip installs packages from source (or from wheels) that are uploaded to PyPI.</li>
+<li>Pip is specific to Python code, which can make it difficult to install packages with non-Python dependencies (things that rely on C or Fortran code for example)</li>
+</ul>
+
+<h4 id="examples-1">Examples:</h4>
+
+<pre><code class="language-none">pip install pandas
+pip freeze &gt; requirements.txt
+pip install --upgrade pandas
+</code></pre>
+
+<h2 id="selected-popular-python-packages">Selected &ldquo;popular&rdquo; python packages</h2>
+
+<p>We won&rsquo;t cover all of these in depth here, but here are a list of packages that tend to be useful in different settings</p>
+
+<ul>
+<li><strong>Plotting:</strong> seaborn, matplotlib, bokeh<br /></li>
+<li><strong>Data Manipulation and numerical computing:</strong> numpy, scipy, pandas</li>
+<li><strong>Machine learning:</strong> scikit-learn, TensorFlow, theano<br /></li>
+<li><strong>Image processing:</strong> scikit-image, Pillow</li>
+<li><strong>Documentation and testing:</strong> Pytest, sphinx, unittest</li>
+</ul>
+
+<h2 id="introduction-to-several-packages-with-short-examples">Introduction to several packages with short examples</h2>
+
+<p><img src="/img/tutorials/scipy.png" width="30%"/></p>
+
+<h4 id="scipy-is-a-collection-of-open-source-python-libraries-for-mathematics-science-and-engineering">SciPy is a collection of open-source Python libraries for mathematics, science, and engineering</h4>
+
+<ul>
+<li>Contains many useful tools for optimization, signal processing, curve fitting</li>
+<li>Tip: SciPy can be on the more difficult side to install due to all of the C dependencies. Highly recommended to use Conda as a package management tool</li>
+<li>Example:</li>
+</ul>
+
+<pre><code class="language-python">import numpy as np
+import matplotlib.pyplot as plt
+from scipy.optimize import curve_fit
+
+def func(x, a, b, c):
+    return a * np.exp(-b * x) + c
+
+# define the data to be fit with some noise
+
+xdata = np.linspace(0, 4, 50)
+y = func(xdata, 2.5, 1.3, 0.5)
+y_noise = 0.2 * np.random.normal(size=xdata.size)
+ydata = y + y_noise
+plt.plot(xdata, ydata, 'b-', label='data')
+
+# Fit for the parameters a, b, c of the function func
+
+popt, pcov = curve_fit(func, xdata, ydata)
+plt.plot(xdata, func(xdata, *popt), 'r-', label='fit')
+
+# Constrain the optimization to the region of 0 &lt; a &lt; 3, 0 &lt; b &lt; 2 and 0 &lt; c &lt; 1:
+
+popt, pcov = curve_fit(func, xdata, ydata, bounds=(0, [3., 2., 1.]))
+plt.plot(xdata, func(xdata, *popt), 'g--', label='fit-with-bounds')
+
+plt.xlabel('x')
+plt.ylabel('y')
+plt.legend()
+plt.show()
+</code></pre>
+
+<p><img src="/img/tutorials/python-packages/scipy-output.png" width="50%"/>
+<hr>
+<img src="/img/tutorials/numpy.png" width="40%"/></p>
+
+<h4 id="numpy-a-very-useful-library-for-scientific-computing-it-adds-support-for-arrays-linear-algebra-tools-and-optimized-integration-with-c-fortran">NumPy a very useful library for scientific computing. It adds support for arrays, linear algebra tools and optimized integration with C/Fortran</h4>
+
+<ul>
+<li>Used by many, many other numerical/scientific computing packages</li>
+<li>Potentially useful: <a href="https://docs.scipy.org/doc/numpy-dev/user/numpy-for-matlab-users.html">NumPy for MATLAB users</a></li>
+<li>Example:</li>
+</ul>
+
+<pre><code class="language-python">import numpy as np
+
+x = np.linspace(0,10, num=10)
+y = np.random.random(len(x))
+
+y_mean = y.mean()
+y_std = y.std()
+
+print('Mean = {0:.3f} \t Std. Dev. = {1:.3f}'.format(y_mean, y_std))
+
+plt.plot(x, y, 'o')
+plt.ylim(0,1)
+plt.show()
+</code></pre>
                         </div>
                         
                         
@@ -391,6 +519,8 @@ ga('send', 'pageview');
 
 
 <script src="https://ecshackweek.github.io/js/owl.carousel.min.js"></script>
+
+<script>hljs.initHighlightingOnLoad();</script>
 
 
   </body>
