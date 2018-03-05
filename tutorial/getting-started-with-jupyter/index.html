@@ -171,7 +171,223 @@
 
 <hr></p>
 
-<p>Jupyter is a browser-based application allowing you to run &ldquo;notebooks&rdquo; in your browser.</p>
+<p>Jupyter is an open-source web application allowing you to run &ldquo;notebooks&rdquo; in your browser.
+These notebooks can contain code, equations, and visualizations in one, interactive, and shareable place.</p>
+
+<p>If you want to quickly demo the notebooks online you can go to <a href="https://try.jupyter.org/">https://try.jupyter.org/</a></p>
+
+<p>In this post, we will discuss installing Jupyter and demo some of the useful features of this technology.</p>
+
+<h3 id="1-installing-jupyter">1. Installing Jupyter</h3>
+
+<p>Installing Jupyter using conda is as simple as running <code>conda install jupyter</code></p>
+
+<h3 id="2-running-the-jupyter-application">2. Running the Jupyter application</h3>
+
+<p>To open the application in your browser, simply run <code>jupyter notebook</code> in the directory you want to work in</p>
+
+<p>A few seconds after executing the above code, your default browser should open and you should see:</p>
+
+<p><img src="/img/tutorials/jupyter-start.png" width="100%" /></p>
+
+<h3 id="3-creating-a-new-notebook">3. Creating a new notebook</h3>
+
+<p>To create a new notebook, click on &ldquo;New &gt; Python 3&rdquo;:</p>
+
+<p><img src="/img/tutorials/create-notebook.png" style="max-width: 40%; max-height: 30vh; padding: 2px"/></p>
+
+<p>which will create a blank notebook document titled &ldquo;Untitled.ipynb&rdquo;:</p>
+
+<p><img src="/img/tutorials/jupyter-new.png" width="100%" /></p>
+
+<h3 id="4-overview-of-notebook-components">4. Overview of notebook components</h3>
+
+<p>Before we start writing code, let&rsquo;s take a second to explore the notebook itself:</p>
+
+<p><img src="/img/tutorials/jupyter-components.png" width="100%" /></p>
+
+<ul>
+<li>To change the filename, simply click on the title and rename the file</li>
+<li>We can see that the kernal here is a Python 3 kernal and that it is currently not executing anything (dot is unfilled)</li>
+<li>We will use the cell type selection into good use below to switch between code and markdown</li>
+</ul>
+
+<h3 id="5-let-s-execute-some-code">5. Let&rsquo;s execute some code!</h3>
+
+<p>Let&rsquo;s start by typing some example Python code into the cell:</p>
+
+<pre><code>import datetime
+
+hackWeek = datetime.date(2018, 5, 14)
+now = datetime.datetime.now().date()
+
+print('There are {} days left until the ECS Hack Week. Get stoked!'.format((hackWeek - now).days))
+</code></pre>
+
+<p>To execute this cell we can press <code>shift</code> + <code>enter</code></p>
+
+<h3 id="6-other-cool-features">6. Other cool features:</h3>
+
+<p>In addition to running code snippets in cells, Jupyter also has several other handy features.</p>
+
+<h4 id="markdown">Markdown</h4>
+
+<p>Jupyter cells can also be used to display equations, documentation, and tables using Markdown.</p>
+
+<p>To demonstrate this, click on a new cell and select &lsquo;Markdown&rsquo; from the cell type dropdown menu at the top of the notebook.</p>
+
+<p>Type some Markdown:</p>
+
+<pre><code>
+### Lists
+- a
+- b
+
+### Equations
+$$
+\frac{\partial (\epsilon c)}{\partial t} = \frac{\partial}{\partial x}\left( \epsilon D_{eff}\frac{\partial c}{\partial x} \right) + a (1-t_+^0) j_n
+$$
+
+### Tables
+
+| Name | | Column |
+|:---:|:---:|:---:|
+||This is a fun table||
+|To Do| Fill in the rest| |
+</code></pre>
+
+<p>and click <code>shift</code> + <code>enter</code> again to execute the cell. This time instead of executing code, you should see the following display:</p>
+
+<p><img src="/img/tutorials/jupyter-markdown.png" width="100%" /></p>
+
+<p>Markdown is a powerful tool to display images/equations/code/notes easily (all the tutorial posts here are written in Markdown for example).
+For additional information on Markdown syntax, there are several &lsquo;Markdown Cheatsheets&rsquo; (e.g. <a href="https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet">here</a> or <a href="https://daringfireball.net/projects/markdown/syntax">here</a>)</p>
+
+<h4 id="keyboard-shortcuts">Keyboard shortcuts</h4>
+
+<p>Just like we used the <code>shift</code> + <code>enter</code> shortcut to execute a cell, there are lots of other shortcuts which make it even easier to work within Jupyter notebooks.</p>
+
+<p>There are two different &lsquo;modes&rsquo; you can be in when using the notebook (Command mode and Edit mode).
+You can tell which mode based off of the color of the cell outline (blue = Command mode, green = Edit mode) and you can switch between the two using the <code>esc</code> and <code>enter</code> keys.</p>
+
+<p>For example,</p>
+
+<ol>
+<li>Click on a cell so you can type code (you&rsquo;re now in edit mode)</li>
+<li>Push <code>esc</code> (to switch to Command mode)</li>
+<li>Push <code>b</code> (this is the shortcut to create a new cell below your current location)</li>
+<li>Push <code>m</code> (to switch this cell type to Markdown)</li>
+<li>Push <code>enter</code> (to enter Edit mode)</li>
+<li>Type some Markdown code</li>
+<li>Use <code>shift</code> + <code>enter</code> to execute</li>
+</ol>
+
+<p>Here are a few useful shortcuts (you can see all of them by hitting <code>h</code> in command mode):
+<center></p>
+
+<h5 id="useful-command-mode-shortcuts">Useful command mode shortcuts</h5>
+
+<table>
+<thead>
+<tr>
+<th align="center">Command</th>
+<th align="center">Action</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td align="center">a</td>
+<td align="center">Create new cell above</td>
+</tr>
+
+<tr>
+<td align="center">b</td>
+<td align="center">Create new cell below</td>
+</tr>
+
+<tr>
+<td align="center">d d</td>
+<td align="center">Delete current cell</td>
+</tr>
+
+<tr>
+<td align="center">z</td>
+<td align="center">Undo delete cell</td>
+</tr>
+
+<tr>
+<td align="center">m</td>
+<td align="center">Change cell to markdown</td>
+</tr>
+
+<tr>
+<td align="center">y</td>
+<td align="center">Change cell to code</td>
+</tr>
+
+<tr>
+<td align="center">h</td>
+<td align="center">Bring up the list of shortcuts</td>
+</tr>
+</tbody>
+</table>
+
+<h5 id="useful-editing-shortcuts">Useful editing shortcuts</h5>
+
+<table>
+<thead>
+<tr>
+<th align="center">Command</th>
+<th align="center">Action</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td align="center">Ctrl-a</td>
+<td align="center">Select all</td>
+</tr>
+
+<tr>
+<td align="center">Ctrl-c</td>
+<td align="center">Copy</td>
+</tr>
+
+<tr>
+<td align="center">Ctrl-v</td>
+<td align="center">Paste</td>
+</tr>
+
+<tr>
+<td align="center">Ctrl-s</td>
+<td align="center">Save</td>
+</tr>
+
+<tr>
+<td align="center">Tab</td>
+<td align="center">Autocomplete</td>
+</tr>
+
+<tr>
+<td align="center">Shift-tab</td>
+<td align="center">Tooltips</td>
+</tr>
+</tbody>
+</table>
+
+<p></center></p>
+
+<h4 id="support-for-lot-s-of-different-languages">Support for lot&rsquo;s of different languages</h4>
+
+<p>While Jupyter grew out of IPython and stands for Ju (Julia) + py (Python) + r &reg;, the Jupyter environment supports kernals for many many (~75) other languages</p>
+
+<p><center><img src="/img/tutorials/jupyter-languages.jpg" width="50%"/></center>
+<p style="text-align:right">Image from Fernando Perez PLOTCON talk</p></p>
+
+<h3 id="if-you-ve-made-it-this-far-congratulations">If you&rsquo;ve made it this far, congratulations!</h3>
+
+<p>You now have Jupyter installed and know your basic way around using notebooks for executing code and displaying Markdown. In the next tutorial, we&rsquo;ll introduce several useful Python packages and start performing some more useful analysis. <a href="https://ecshackweek.github.io/tutorial/using-python-packages/">Part 3. Using Python packages</a>.</p>
                         </div>
                         
                         
