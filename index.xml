@@ -61,6 +61,16 @@
     </item>
     
     <item>
+      <title>Installing Git Bash for Windows</title>
+      <link>https://ecshackweek.github.io/tutorial/installing-git-bash-on-windows/</link>
+      <pubDate>Mon, 22 Jan 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://ecshackweek.github.io/tutorial/installing-git-bash-on-windows/</guid>
+      <description>&lt;p&gt;This tutorial will cover the installation of Git BASH for Windows users.
+&lt;/p&gt;</description>
+    </item>
+    
+    <item>
       <title>Making figures in Python</title>
       <link>https://ecshackweek.github.io/tutorial/making-figures-with-python/</link>
       <pubDate>Mon, 22 Jan 2018 00:00:00 +0000</pubDate>
