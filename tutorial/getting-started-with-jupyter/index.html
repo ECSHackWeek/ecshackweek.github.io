@@ -180,7 +180,8 @@ These notebooks can contain code, equations, and visualizations in one, interact
 
 <p>If you want to quickly demo the notebooks online you can go to <a href="https://try.jupyter.org/">https://try.jupyter.org/</a></p>
 
-<p>In this post, we will discuss installing Jupyter and demo some of the useful features of this technology.</p>
+<p>In this post, we will discuss installing Jupyter and demo some of the useful features of this technology.
+A Jupyter notebook with the below examples can be downloaded here: <a href="/intro-to-jupyter.ipynb" download/>intro-to-jupyter.ipynb</a></p>
 
 <h3 id="1-installing-jupyter">1. Installing Jupyter</h3>
 
@@ -230,7 +231,41 @@ print('There are {} days left until the ECS Hack Week. Get stoked!'.format((hack
 
 <p>To execute this cell we can press <code>shift</code> + <code>enter</code></p>
 
-<h3 id="6-other-cool-features">6. Other cool features:</h3>
+<h3 id="6-modularity-makes-it-easy-to-develop-code-in-bite-size-chunks">6. Modularity makes it easy to develop code in bite size chunks</h3>
+
+<h4 id="step-1-data-intensive-operation">Step 1. Data intensive operation</h4>
+
+<pre><code class="language-python"># import the pandas package
+import pandas as pd
+
+# read in the data from our file
+file_location = 'https://raw.githubusercontent.com/mdmurbach/ECS-Hack-Day-2017/master/time-data(833).txt?raw=true'
+data = pd.read_csv(file_location)
+
+# assign names to each of the columns for easy reference
+data.columns = ['time(s)', 'current(A)', 'potential(V)', 'frequency(Hz)', 'amplitude(A)']
+
+# print out the first 5 rows of our data
+data.head()
+</code></pre>
+
+<p><img src="/img/tutorials/intro-jupyter/step1.png" width="50%"/></p>
+
+<h4 id="step-2-visualization-or-exploratory-data-analysis">Step 2. Visualization or exploratory data analysis</h4>
+
+<pre><code class="language-python"># import the matplotlib package
+import matplotlib.pyplot as plt
+
+# plot the current and voltage vs time
+plt.plot(data['time(s)'], data['current(A)'])
+plt.plot(data['time(s)'], data['potential(V)'])
+
+plt.show()
+</code></pre>
+
+<p><img src="/img/tutorials/intro-jupyter/step2.png" width="50%"/></p>
+
+<h3 id="7-other-cool-features">7. Other cool features:</h3>
 
 <p>In addition to running code snippets in cells, Jupyter also has several other handy features.</p>
 
