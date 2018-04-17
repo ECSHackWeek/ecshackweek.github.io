@@ -94,12 +94,15 @@ function sliderHomepage () {
 function sliders () {
   if ($('.owl-carousel').length) {
     $('.customers').owlCarousel({
-      items: 3,
+      items: 5,
       margin:10,
-      loop:false,
-      rewind:false,
-      autoWidth:true,
-      navigation:false
+      // loop:true,
+      // rewind:true,
+      // autoWidth:true,
+      // navigation:true,
+      // autoPlay: 2000,
+      // stopOnHover: true,
+      // navigationText : ["<i class='fa fa-chevron-left'></i>","<i class='fa fa-chevron-right'></i>"]
     })
 
     $('.recent-posts').owlCarousel({

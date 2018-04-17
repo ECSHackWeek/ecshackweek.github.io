@@ -20,8 +20,8 @@
 	-ms-touch-action: pan-y;
 }
 .owl-carousel .owl-wrapper{
-	display: none;
 	position: relative;
+	display: table !important;
 	-webkit-transform: translate3d(0px, 0px, 0px);
 }
 .owl-carousel .owl-wrapper-outer{
@@ -38,7 +38,9 @@
 }
 
 .owl-carousel .owl-item{
-	float: left;
+	display: table-cell;
+	float: none;
+	vertical-align: middle;
 }
 .owl-controls .owl-page,
 .owl-controls .owl-buttons div{
