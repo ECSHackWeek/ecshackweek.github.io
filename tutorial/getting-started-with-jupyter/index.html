@@ -196,13 +196,21 @@ A Jupyter notebook with the below examples can be downloaded here: <a href="/int
 
 <h3 id="1-installing-jupyter">1. Installing Jupyter</h3>
 
-<p>Installing Jupyter using conda is as simple as running <code>conda install jupyter</code></p>
+<h4 id="installing-jupyter-and-jupyter-lab">Installing Jupyter and Jupyter Lab</h4>
+
+<p>Open your command prompt or Git BASH (Windows) or a terminal (OS X, linux)</p>
+
+<ul>
+<li>Install Jupyter by running <code>conda install jupyter notebook</code></li>
+<li>Install Jupyter Lab by running <code>conda install -c conda-forge jupyterlab</code></li>
+</ul>
 
 <h3 id="2-running-the-jupyter-application">2. Running the Jupyter application</h3>
 
 <h4 id="navigate-to-the-directory-you-d-like-to-work-in">Navigate to the directory you&rsquo;d like to work in</h4>
 
-<p>Open your command prompt or Git BASH (Windows) or a terminal (OS X, linux) and navigate to the directory you want to run Jupyter in (<i> Note: </i> the <code>cd</code> command means change directory and <code>mkdir</code> makes a directory):</p>
+<p>Run the following in your command prompt or terminal to create a directory in your Documents folder for this tutorial.
+<br><i> Note: the <code>cd</code> command means change directory and <code>mkdir</code> makes a directory</i></p>
 
 <p>(Command prompt)</p>
 
@@ -212,37 +220,37 @@ C:\Users\your-username\Documents&gt; cd jupyter-tutorial
 C:\Users\your-username\Documents\jupyter-tutorial&gt;
 </code></pre>
 
-<h4 id="opening-jupyter">Opening Jupyter</h4>
+<h4 id="opening-jupyter-lab">Opening Jupyter Lab</h4>
 
-<p>To open the application simply run the command <code>jupyter notebook</code></p>
+<p>To open the application simply run the command <code>jupyter lab</code></p>
 
-<pre><code class="language-shell">C:\Users\your-username\Documents\jupyter-tutorial&gt; jupyter notebook
+<pre><code class="language-shell">C:\Users\your-username\Documents\jupyter-tutorial&gt; jupyter lab
 </code></pre>
 
 <p>A few seconds after executing the above code, your default browser should open and you should see:</p>
 
-<p><img src="/img/tutorials/jupyter-start.png" width="100%" /></p>
+<p><img src="/img/tutorials/intro-jupyter/jupyter-open.png" width="100%" /></p>
 
 <h3 id="3-creating-a-new-notebook">3. Creating a new notebook</h3>
 
-<p>To create a new notebook, click on &ldquo;New &gt; Python 3&rdquo;:</p>
+<p>To create a new notebook, click on &ldquo;Python 3&rdquo; under the notebook header:</p>
 
-<p><img src="/img/tutorials/create-notebook.png" style="max-width: 40%; max-height: 30vh; padding: 2px"/></p>
+<p><img src="/img/tutorials/intro-jupyter/new-notebook.png" width="30%" /></p>
 
-<p>which will create a blank notebook document titled &ldquo;Untitled.ipynb&rdquo;:</p>
+<p>which will create a blank notebook document titled &ldquo;Untitled.ipynb&rdquo; that is now displayed as a tab:</p>
 
-<p><img src="/img/tutorials/jupyter-new.png" width="100%" /></p>
+<p><img src="/img/tutorials/intro-jupyter/new-notebook-open.png" width="100%" /></p>
 
 <h3 id="4-overview-of-notebook-components">4. Overview of notebook components</h3>
 
 <p>Before we start writing code, let&rsquo;s take a second to explore the notebook itself:</p>
 
-<p><img src="/img/tutorials/jupyter-components.png" width="100%" /></p>
+<p><img src="/img/tutorials/intro-jupyter/notebook-components.png" width="100%" /></p>
 
 <ul>
-<li>To change the filename, simply click on the title and rename the file</li>
+<li>To change the filename, simply right-click on the title and rename the file</li>
 <li>We can see that the kernal here is a Python 3 kernal and that it is currently not executing anything (dot is unfilled)</li>
-<li>We will use the cell type selection into good use below to switch between code and markdown</li>
+<li>We will put the cell type selection into good use below to switch between code and markdown</li>
 </ul>
 
 <h3 id="5-let-s-execute-some-code">5. Let&rsquo;s execute some code!</h3>
