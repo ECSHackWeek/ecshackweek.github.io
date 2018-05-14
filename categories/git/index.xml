@@ -13,13 +13,14 @@
     
     
     <item>
-      <title>Installing Git Bash for Windows</title>
+      <title>Installing Git and a Shell</title>
       <link>https://ecshackweek.github.io/tutorial/installing-git-bash-on-windows/</link>
       <pubDate>Mon, 22 Jan 2018 00:00:00 +0000</pubDate>
       
       <guid>https://ecshackweek.github.io/tutorial/installing-git-bash-on-windows/</guid>
-      <description>&lt;p&gt;This tutorial will cover the installation of Git BASH for Windows users.
-&lt;/p&gt;</description>
+      <description>git and github git is a system used for version control and collaboration.
+You should have a github account and ensure that git is installed on your computer.
+Bash shell and git software version control The bash shell provides a programming environment that is often used to manipulate files, install programs, and basic data analysis. The git version control system (along with the github website) are widely used for sharing codes and collaborative development of software.</description>
     </item>
     
   </channel>
